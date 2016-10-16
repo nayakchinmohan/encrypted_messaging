@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<center><h2><p>Welcome to Chinmohan's Messaging Services</p></h2></center><br/><br/>
+	<h3 style="font-size=150%">1) To generate new pair of DSA and RSA keys : <a href="/keygen">Click Here</a></h3><br/><br/>
+
+	<h3>2) Register keys in the server :<a href="/regkeys">Click Here</a></h3> <br/><br/>
+
+        <h3>3) Enumerate users in the server :<a href="/enumusers">Click Here</a></h3> <br/><br/>
+
+
+	<h3>4) Send message to recepient:</h3> <br/><br/>
+	<form action="/encrypt" method="post">
+		
+		<p>To begin, please enter the message and recepient:</p><br/>
+		<label for="recepient">Recepient:</label>
+		<input name="recepient" type="text" id="recepient" />
+		<label for="message">Message:</label>
+		<input name="message" type="text" id="message" />
+		<input type="submit" value="Submit" />
+	</form> <br/> <br/>
+
+	<h3>5) Check for new messages : <a href="/decrypt">Click Here</a></h3><br/>
+<br/>
+
+	<h2> Informational Operations</h2><br/><br/>
+
+	<h3>6) Key Fingerprinting:</h3> <br/><br/>
+
+        <form action="/fingerprint" method="post">
+
+                <p>To begin, please enter the username:</p><br/>
+                <label for="recepient">User:</label>
+                <input name="recepient" type="text" id="recepient" />
+                <input type="submit" value="Submit" />
+        </form> <br/> <br/>
+
+
+{% endblock %}

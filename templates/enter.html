@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<center><h2><p>Welcome to Chinmohan's Messaging Services</p></h2></center><br/><br/>
+<br/>
+	<h3> To use the messaging service enter your username :</h3><br/>
+
+         <form action="/menu" method="post">
+
+                <label for="username">Username:</label>
+                <input name="username" type="text" id="username" />
+                <input type="submit" value="Submit" />
+        </form>
+
+{% endblock %}
